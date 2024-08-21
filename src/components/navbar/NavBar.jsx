@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    Navbar,
+
     Collapse,
     Typography,
     IconButton,
@@ -38,7 +38,7 @@ export default function NavBar() {
     }, []);
 
     return (
-        <Navbar className=" max-w-none px-6 py-3 shadow-none w-full">
+        <div className=" max-w-none px-6 py-3 shadow-none w-full bg-transparent border-0">
             <div className="flex items-center justify-between text-blue-gray-900">
                 <Typography
                     as="a"
@@ -48,7 +48,7 @@ export default function NavBar() {
                 >
                     <div className="flex justify-center items-center gap-4">
                         <img src="/wufoo.png" className="w-10 h-10" alt="" /> 
-                        <p className="font-bold text-lg md:text-xl lg:text-3xl xl:text-4xl">WUFOO-SCHOOL</p>
+                        <p className="font-bold text-lg md:text-xl lg:text-3xl xl:text-4xl text-white">WUFOO-SCHOOL</p>
                     </div>
                 </Typography>
                 <div className="hidden lg:block">
@@ -70,6 +70,6 @@ export default function NavBar() {
             <Collapse open={openNav}>
                 <NavList />
             </Collapse>
-        </Navbar>
+        </div>
     );
 }

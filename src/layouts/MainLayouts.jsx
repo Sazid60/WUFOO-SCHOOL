@@ -6,9 +6,8 @@ import Footer from '../components/footer/Footer';
 const MainLayouts = () => {
     return (
         <div>
-            <div className='w-full '>
-                <NavBar />
-                <div className=' px-5 min-h-[calc(100vh-300px)]'>
+            <div className='w-full'>
+                <div className=''>
                     <Outlet></Outlet>
                 </div>
             </div>
