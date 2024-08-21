@@ -2,7 +2,8 @@ import React from 'react';
 import Banner from '../../components/banner/Banner';
 import Courses from '../../components/courses/Courses';
 import NavBar from '../../components/navbar/NavBar';
-import { Offerings } from '../../components/offerings/Offerings';
+import Offerings from '../../components/offerings/Offerings';
+
 
 const Home = () => {
     return (

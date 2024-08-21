@@ -48,7 +48,7 @@ export default function NavBar() {
                 >
                     <div className="flex justify-center items-center gap-4">
                         <img src="/wufoo.png" className="w-10 h-10" alt="" /> 
-                        <p className="font-bold text-lg md:text-xl lg:text-3xl xl:text-4xl text-white">WUFOO-SCHOOL</p>
+                        <p className="font-extrabold text-lg md:text-xl lg:text-3xl xl:text-4xl text-white">WUFOO-SCHOOL</p>
                     </div>
                 </Typography>
                 <div className="hidden lg:block">
