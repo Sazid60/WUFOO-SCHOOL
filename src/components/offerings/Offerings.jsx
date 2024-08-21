@@ -24,7 +24,7 @@ export default function Offerings() {
         {
             id: 3,
             title: "Book Library & Store",
-            description: "The book library offers a vast collection of academic, fiction, and reference materials for borrowing and study. The store provides students with the option to purchase textbooks, stationery, and other educational resources.",
+            description: "The book library offers a vast collection of academic, fiction, and reference materials for borrowing and study. The store provides students with the option to purchase textbooks, stationery, and other.",
             icon: <IoIosBookmarks className="text-5xl mb-3" />
         }
     ];
