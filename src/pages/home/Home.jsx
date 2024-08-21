@@ -16,8 +16,9 @@ const Home = () => {
                 </div>
             </div>
             <Offerings/>
-
             <Courses/>
+            
+
         </div>
     );
 };

@@ -8,7 +8,7 @@ const Courses = () => {
                 <h1 className="text-center font-bold text-xl md:text-2xl lg:text-3xl xl:text-3xl mt-4 uppercase text-[#F3511E]">Our Departments</h1>
                 <div className="flex justify-center items-center">
                     <p className="max-w-2xl mt-4 text-gray-500 text-center">
-                    Supports students with academic guidance and personal development throughout their educational journey.
+                        Supports students with academic guidance and personal development throughout their educational journey.
                     </p>
                 </div>
             </div>
