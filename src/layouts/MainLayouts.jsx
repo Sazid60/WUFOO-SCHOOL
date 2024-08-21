@@ -8,7 +8,7 @@ const MainLayouts = () => {
         <div>
             <div className='w-full '>
                 <NavBar />
-                <div className=' px-5 min-h-[calc(100vh-448px)]'>
+                <div className=' px-5 min-h-[calc(100vh-300px)]'>
                     <Outlet></Outlet>
                 </div>
             </div>
