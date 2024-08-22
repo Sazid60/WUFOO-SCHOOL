@@ -46,27 +46,25 @@ const ApplicationForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(formData);
-        toast.success('Successfully toasted!')
-        // Uncomment and adjust the URL according to your backend
-        // try {
-        //     await axios.post('/api/admissions', formData);
-        //     alert('Application submitted successfully!');
-        //     setFormData({
-        //         name: '',
-        //         email: '',
-        //         phone: '',
-        //         dob: '',
-        //         address: '',
-        //         guardianName: '',
-        //         guardianContact: '',
-        //         grade: '',
-        //         previousSchool: '',
-        //         hobbies: '',
-        //         subject: '', 
-        //     });
-        // } catch (error) {
-        //     alert(`Error submitting application: ${error}`);
-        // }
+        try {
+            await axios.post('http://localhost:8000/candidates', formData);
+            toast.success('You Have Successfully Applied!');
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                dob: '',
+                address: '',
+                guardianName: '',
+                guardianContact: '',
+                grade: '',
+                previousSchool: '',
+                hobbies: '',
+                subject: department || '',
+            });
+        } catch (error) {
+            toast.error(`Error submitting application: ${error}`);
+        }
     };
 
     return (
@@ -127,9 +125,12 @@ const ApplicationForm = () => {
                     onChange={(value) => handleSelectChange(value, 'grade')}
                     required
                 >
-                    <Option value="Grade 1">Grade 1</Option>
-                    <Option value="Grade 2">Grade 2</Option>
-                    <Option value="Grade 3">Grade 3</Option>
+                    <Option value="Grade 1">A+</Option>
+                    <Option value="Grade 1">A</Option>
+                    <Option value="Grade 1">A-</Option>
+                    <Option value="Grade 2">B+</Option>
+                    <Option value="Grade 3">B</Option>
+                    <Option value="Grade 3">C</Option>
                 </Select>
                 <Input
                     name="previousSchool"
