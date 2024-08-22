@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import {
     Card,
     CardBody,
@@ -8,35 +10,32 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { IoIosBookmarks } from "react-icons/io";
 
 export default function Offerings() {
-    const offeringsData = [
-        {
-            id: 1,
-            title: "Skilled Lecturers",
-            description: "Skilled lecturers are experts in their subject areas, delivering lessons with clarity and engaging teaching methods. They foster a supportive learning environment, encouraging student participation and critical thinking.",
-            icon: <FaPeopleGroup className="text-5xl mb-3" />
-        },
-        {
-            id: 2,
-            title: "Scholarship Facility",
-            description: "The scholarship facility provides financial assistance to students based on academic merit, financial need, or other specific criteria. It helps students pursue their education without the burden of high tuition fees.",
-            icon: <FaGraduationCap className="text-5xl mb-3" />
-        },
-        {
-            id: 3,
-            title: "Book Library & Store",
-            description: "The book library offers a vast collection of academic, fiction, and reference materials for borrowing and study. The store provides students with the option to purchase textbooks, stationery, and other.",
-            icon: <IoIosBookmarks className="text-5xl mb-3" />
-        }
-    ];
+    const [offeringsData, setOfferingsData] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8000/offers')
+            .then(response => {
+                setOfferingsData(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }, []);
+
+    const iconMap = {
+        FaPeopleGroup: <FaPeopleGroup className="text-5xl mb-3" />,
+        FaGraduationCap: <FaGraduationCap className="text-5xl mb-3" />,
+        IoIosBookmarks: <IoIosBookmarks className="text-5xl mb-3" />
+    };
 
     return (
         <div className="flex flex-col lg:flex-row justify-center items-center gap-2 lg:gap-4 xl:gap-5">
             {offeringsData.map((offering) => (
-                <Card key={offering.id} className="mt-6 w-96 hover:scale-105 hover:border border-orange-500">
+                <Card key={offering._id} className="mt-6 w-96 transition-transform duration-300 ease-in-out hover:scale-105 hover:border border-orange-500">
                     <CardBody>
-                        <Typography variant="h5" color="blue-gray" className="mb-2 uppercase">
+                        <Typography variant="h5" color="blue-gray" className="mb-2 uppercase text-center">
                             <div className="flex flex-col justify-center items-center">
-                                {offering.icon}
+                                {iconMap[offering.icon]}
                                 <p>{offering.title}</p>
                             </div>
                         </Typography>
