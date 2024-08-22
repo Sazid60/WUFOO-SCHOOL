@@ -13,7 +13,7 @@ export default function Offerings() {
     const [offeringsData, setOfferingsData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/offers')
+        axios.get('https://wufoo-server.vercel.app/offers')
             .then(response => {
                 setOfferingsData(response.data);
             })

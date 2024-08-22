@@ -9,7 +9,7 @@ const CourseCard = () => {
     useEffect(() => {
         const fetchDepartments = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/courses');
+                const response = await axios.get('https://wufoo-server.vercel.app/courses');
                 setDepartments(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);

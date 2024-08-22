@@ -18,7 +18,7 @@ const Footer = () => {
                         <h3 className="tracking-wide uppercase text-orange-900 font-extrabold">Admissions</h3>
                         <ul className="space-y-1">
                             <li>
-                                <a rel="noopener noreferrer" href="#">Apply Now</a>
+                                <a rel="noopener noreferrer" href="/application">Apply Now</a>
                             </li>
                             <li>
                                 <a rel="noopener noreferrer" href="#">Application Deadlines</a>

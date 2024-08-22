@@ -47,7 +47,7 @@ const ApplicationForm = () => {
         e.preventDefault();
         console.log(formData);
         try {
-            await axios.post('http://localhost:8000/candidates', formData);
+            await axios.post('https://wufoo-server.vercel.app/candidates', formData);
             toast.success('You Have Successfully Applied!');
             setFormData({
                 name: '',
