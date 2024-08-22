@@ -1,5 +1,6 @@
 import { Button } from '@material-tailwind/react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
@@ -12,7 +13,7 @@ const Banner = () => {
                             <h1 className="text-2xl md:text-3xl lg:text-6xl font-bold leading-none xl:max-w-6xl uppercase">Standard Syllabus For Students</h1>
                             <p className="mt-6 mb-6  text-sm md:text-lg lg:text-xl  xl:max-w-2xl dark:text-gray-50">The standard syllabus for students outlines the essential subjects and topics to be covered in a specific academic course or grade level.</p>
                             <div className="flex flex-wrap justify-center">
-                                <Button className="bg-deep-orange-600">Apply Now</Button>
+                            <Link to="/application"><Button className="bg-deep-orange-600">Apply Now</Button></Link>
                             </div>
                         </div>
                     </div>

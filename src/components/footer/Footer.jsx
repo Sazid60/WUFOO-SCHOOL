@@ -10,7 +10,7 @@ const Footer = () => {
                         <div className="flex items-center justify-center w-12 h-12 rounded-fu">
                             <img src="/wufoo.png" alt="" />
                         </div>
-                        <span className="self-center text-2xl font-extrabold">WUFOO-SCHOOL</span>
+                        <span className="self-center text-2xl font-extrabold">WUFOO-University</span>
                     </a>
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -69,7 +69,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-6 text-sm text-center text-gray-600">© 2024 Wufoo-School. All rights reserved.</div>
+            <div className="py-6 text-sm text-center text-gray-600">© 2024 Wufoo-University. All rights reserved.</div>
         </footer>
     );
 };
