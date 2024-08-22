@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button, Card, CardBody, CardHeader, Typography } from '@material-tailwind/react';
+import { Link } from 'react-router-dom';
 
 const CourseCard = () => {
     const [departments, setDepartments] = useState([]);
@@ -48,7 +49,11 @@ const CourseCard = () => {
                             >
                                 {department.description}
                             </Typography>
-                            <Button className='bg-[#F3511E]'>Apply Now</Button>
+
+                            <Link to={`/application?department=${department.department}`}>
+                                <Button className='bg-[#F3511E]'>Apply Now</Button>
+                            </Link>
+
                         </CardBody>
                     </Card>
                 </div>
