@@ -20,12 +20,12 @@ const CourseCard = () => {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 justify-center items-center lg:grid-cols-2 xl:grid-cols-3 gap-6 p-6 container mx-auto">
             {departments.map((department, index) => (
                 <div key={index}>
                     <Card
                         shadow={false}
-                        className="relative grid h-[40rem] w-full max-w-[28rem] overflow-hidden text-center transition-transform transform hover:scale-105 hover:opacity-90"
+                        className="relative grid h-[28rem] md:h-[32rem] lg:h-[36rem] xl:h-[40rem] overflow-hidden text-center transition-transform transform hover:scale-105 hover:opacity-90"
                     >
                         <CardHeader
                             floated={false}
@@ -39,21 +39,20 @@ const CourseCard = () => {
                         <CardBody className="absolute inset-0 py-8 px-6 flex flex-col justify-center items-center bg-black/50 text-white">
                             <Typography
                                 variant="h4"
-                                className="mb-4 font-extrabold text-lg md:text-lg lg:text-lg xl:text-2xl text-[#F3511E]"
+                                className="mb-4 font-extrabold text-sm md:text-lg lg:text-lg xl:text-xl text-[#F3511E]"
                             >
                                 {department.name}
                             </Typography>
                             <Typography
                                 variant="h2"
-                                className="font-medium text-xs md:text-sm lg:text-sm xl:text-sm h-36 md:h-60 lg:h-60 xl:h-44"
+                                className="font-medium text-[14px] md:text-sm lg:text-sm xl:text-sm h-44 md:h-32 lg:h-48 xl:h-52"
                             >
                                 {department.description}
                             </Typography>
 
                             <Link to={`/application?department=${department.department}`}>
-                                <Button className='bg-[#F3511E]'>Apply Now</Button>
+                                <button className='bg-[#F3511E] p-2 rounded-lg text-[14px] md:text-sm lg:text-sm xl:text-sm'>Apply Now</button>
                             </Link>
-
                         </CardBody>
                     </Card>
                 </div>

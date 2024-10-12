@@ -10,10 +10,10 @@ const Footer = () => {
                         <div className="flex items-center justify-center w-12 h-12 rounded-fu">
                             <img src="/wufoo.png" alt="" />
                         </div>
-                        <span className="self-center text-2xl font-extrabold">WUFOO-University</span>
+                        <span className="self-center text-lg md:text-2xl font-extrabold uppercase">WUFOO-University</span>
                     </a>
                 </div>
-                <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+                <div className="grid grid-cols-2 text-[14px] md:text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                     <div className="space-y-3">
                         <h3 className="tracking-wide uppercase text-orange-900 font-extrabold">Admissions</h3>
                         <ul className="space-y-1">

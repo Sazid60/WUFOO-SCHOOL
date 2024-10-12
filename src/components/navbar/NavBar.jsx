@@ -14,8 +14,8 @@ function NavList() {
     return (
         <div className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
 
-            <div className="flex justify-center items-center text-[#F3511E] gap-2"><span><IoIosCall /></span>+8801639768727</div>
-            <div className="flex justify-center items-center text-[#F3511E] gap-2"><span><FaLocationArrow /></span>Dhaka,Bangladesh</div>
+            <div className="flex justify-center items-center text-[#F3511E] gap-2 text-[14px] md:text-sm"><span><IoIosCall /></span>+8801639768727</div>
+            <div className="flex justify-center items-center text-[#F3511E] gap-2 text-[14px] md:text-sm"><span><FaLocationArrow /></span>Dhaka,Bangladesh</div>
 
         </div>
     );
@@ -47,7 +47,7 @@ export default function NavBar() {
                     <Link to="/">
                         <div className="flex justify-center items-center gap-4">
                             <img src="/wufoo.png" className="w-10 h-10" alt="" />
-                            <p className="font-extrabold text-lg md:text-xl lg:text-3xl xl:text-4xl  text-[#F3511E]">WUFOO-UNIVERSITY</p>
+                            <p className="font-extrabold text-xs md:text-2xl  text-[#F3511E]">WUFOO-UNIVERSITY</p>
                         </div>
                     </Link>
                 </Typography>
